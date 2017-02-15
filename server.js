@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one',function(req,res){
-res.send('Article one request is permitted');  
+res.sendFile(path.join(__dirname, 'ui', 'articel-one.html'));
 });
 
 app.get('/article-two',function(req,res){
