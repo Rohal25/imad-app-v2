@@ -1,10 +1,11 @@
-var express = require('express');
-var morgan = require('morgan');
+var express = require('express'); //1,2,3, are libraries 
+// express is the library which is use to create a web server 
+var morgan = require('morgan');//to help us output log of our web serber
 var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
+// 9,13,16 are lines which handles specific urls
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -22,3 +23,6 @@ var port = 8080; // Use 8080 for local development because you might already hav
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
 });
+
+
+//server.js file is the source code of the web server that is executed
